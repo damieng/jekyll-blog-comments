@@ -1,0 +1,23 @@
+<h3>Respond to this</h3>
+<form action="{{ site.comments.receiver }}" method="post" id="commentform" class="form-horizontal">
+  <input name="redirect" type="hidden" value="/thanks">
+  <input name="post_id" type="hidden" value="{{ page.slug }}">
+  <div id="commenttext">
+    <textarea name="comment" id="comment" placeholder="Continue the discussion."></textarea>
+  </div>
+  <div class="control-group">
+    <label>Name/alias <span>(Required, displayed)</span></label>
+    <input type="text" name="author" id="author" placeholder="Name" />
+  </div>
+  <div class="control-group">
+    <label>Email <span>(Required, not shown)</span></label>
+    <input type="text" name="email" id="email" placeholder="myemail@somedomain.com" />
+  </div>
+  <div class="control-group">
+    <label>Website <span>(Optional, displayed)</span></label>
+    <input type="text" name="url" id="url" placeholder="https://mywebsite.com" />
+  </div>
+  <div class="control-group">
+    <button type="submit" class="btn btn-primary" id="submit">Leave response</button>
+  </div>
+</form>

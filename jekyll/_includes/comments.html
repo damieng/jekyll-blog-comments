@@ -1,0 +1,23 @@
+{% capture default_slug %}{{ page.slug | default: (page.title | slugify) }}{% endcapture %}
+{% capture slug %}{{ (page.slug | fallback: default_slug) | downcase }}{% endcapture %}
+{% assign comments_map = site.data.comments[slug] %}
+{% assign comments = site.emptyArray %}
+{% for comment in comments_map %}
+  {% assign comments = comments | push: comment[1] %}
+{% endfor %}
+{% assign comment_count = comments | size %}
+{% if comment_count > 0 %}
+  {% assign author = site.authors[page.author] %}
+<div id="comments">
+  <h3>{% if comment_count == 1 %}One response{% else %}{{ comment_count }} responses{% endif %}</h3>
+  <ol>
+  {% assign sorted_comments = comments | sort: 'date' %}
+  {% for comment in sorted_comments %}
+    <li{% if comment.email == author.email %} class="byauthor" {% endif %}>
+      {% include comment.html %}
+    </li>
+  {% endfor %}
+  </ol>
+</div>
+{% endif %}
+{% include comment-new.html %}
