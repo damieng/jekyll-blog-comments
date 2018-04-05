@@ -5,11 +5,7 @@
 <?php error_reporting(-1);                                                                                                    
 require('wp-blog-header.php');                                                                                                
 $comments=get_comments(array('status' => 'approve', 'type' => 'comment', 'orderby'=>'comment_post_ID'));                      
-foreach($comments as $comment) :                                                                                              
-$url=post_permalink($comment->comment_post_ID);                                                                               
-$url=str_replace('https://damieng.com/', '', $url);                                                                           
-$url=str_replace('blog/', '', $url);                                                                                          
-$url=str_replace('/', '-', $url);                                                                                             
+foreach($comments as $comment) :                                                                                                                                                                                   
 $url=get_post_field('post_name', $comment->comment_post_ID);                                                                  
 $folder = dirname(__FILE__) .  "/comments/{$url}";                                                                            
 if (!file_exists($folder)) {                                                                                                  
