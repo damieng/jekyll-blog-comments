@@ -25,7 +25,7 @@ layout: default
 </div>
 ```
 
-Finally you will need to add some things to the end of your `_config.yml` to get sorting and posting working:
+Finally you will need to add this end of your `_config.yml` so sorting and posting work:
 
 ```yml
 emptyArray: []
@@ -33,6 +33,36 @@ emptyArray: []
 comments:
   receiver: https://{{your-site.com/api/PostComment}}
 
+```
+
+You should also make sure you have an author block for each post author so it can match when an author responds to his own post with additional styling;
+
+```yml
+authors:
+  damieng:
+    name: Damien Guard
+    email: damien@envytech.co.uk
+    url: https://damieng.com
+```
+
+If you do not have an author set on each post/page you can define default ones like this;
+
+```yml
+defaults:
+  -
+    scope:
+      path: ''
+      type: pages
+    values:
+      layout: page
+      author: damieng
+  -
+    scope:
+      path: '_posts'
+      type: posts
+    values:
+      layout: post
+      author: damieng
 ```
 
 ## Exporters
