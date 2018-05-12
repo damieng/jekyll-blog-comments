@@ -25,6 +25,8 @@ layout: default
 </div>
 ```
 
+### Configuring Jekyll for the templates
+
 Finally you will need to add this end of your `_config.yml` so sorting and posting work:
 
 ```yml
