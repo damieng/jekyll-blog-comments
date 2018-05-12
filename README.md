@@ -41,7 +41,7 @@ You should also make sure you have an author block for each post author so it ca
 authors:
   damieng:
     name: Damien Guard
-    email: damien@envytech.co.uk
+    email: damieng@gmail.com
     url: https://damieng.com
 ```
 
