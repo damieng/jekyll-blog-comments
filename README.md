@@ -25,10 +25,14 @@ layout: default
 </div>
 ```
 
-Finally you will need to add this to the end of your `_config.yml` as it is required for the sorting to function:
+Finally you will need to add some things to the end of your `_config.yml` to get sorting and posting working:
 
 ```yml
 emptyArray: []
+
+comments:
+  receiver: https://{{your-site.com/api/PostComment}}
+
 ```
 
 ## Exporters
