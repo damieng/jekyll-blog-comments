@@ -76,6 +76,10 @@ defaults:
 - Download the `/comments/` folder over SSH and then *remove it* and the export-blog-comments.php from your server
 - Copy the `/commments/` folder into your Jekyll `_data/` folder
 
+### Disqus
+
+- Visit http://github.com/haacked/disqus-importer and follow the instructionst there.
+
 ## Receivers
 
 In order to process a new comment do you need a little bit of code running somewhere in the cloud to capture the form post, validate the parameters and write it to your repository.  Here's what we have so far:
