@@ -80,9 +80,7 @@ defaults:
 
 In order to process a new comment do you need a little bit of code running somewhere in the cloud to capture the form post, validate the parameters and write it to your repository.  Here's what we have so far:
 
-### Azure + GitHub
-
-[jekyll-blog-comments-azure](https://github.com/damieng/jekyll-blog-comments-azure) creates new comments as pull requests against your blog's GitHub repository.
+* [Azure + GitHub ](https://github.com/damieng/jekyll-blog-comments-azure) creates pull requests against your blog's GitHub repository with the new comment
 
 ## Implementation notes
 
