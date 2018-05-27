@@ -73,10 +73,8 @@ defaults:
 
 - Upload [this file](/exporters/wordpress/export-blog-comments.php) to your site
 - Access export-blog-comments.php call from your browser and wait for it to complete
-- Zip up the `/comments/` folder it created on your site and download it
-- Remove the `/comments/` folder and zip it created from your server!
-- Unpack this folder into your Jekyll site in a `_data/comments/` folder
-- Check the comments into source control
+- Download the `/comments/` folder over SSH and then *remove it* and the export-blog-comments.php from your server
+- Copy the `/commments/` folder into your Jekyll `_data/` folder
 
 ## Receivers
 
