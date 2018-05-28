@@ -12,7 +12,7 @@ The [jekyll/_includes](/jekyll/_includes) folder contains three files that you c
 - [comment-new.html](/jekyll/_includes/comment-new.html) - Show a 'leave a comment' form 
 - [comments.html](/jekyll/_includes/comments.html) - Loops through comment.html for a post and follows it up with comment-new.html
 
-Copy these to your `_includes` folder then include them from your blog post page, e.g. my `_layouts/post.html` file looks like this;
+Copy these to your `_includes` folder then include them from your blog post layout, e.g. my `_layouts/post.html` file looks like this;
 
 ```yml
 ---
@@ -33,7 +33,7 @@ Finally you will need to add this end of your `_config.yml` so sorting and posti
 emptyArray: []
 
 comments:
-  receiver: https://{{your-site.com/api/PostComment}}
+  receiver: https://{{your-receiver-site}}/api/PostComment}}
 
 ```
 
