@@ -37,7 +37,9 @@ comments:
 
 ```
 
-You should also make sure you have an author block for each post author so it can match when an author responds to his own post with additional styling;
+### Optional post-author highlighting
+
+You need to make sure you have an author block for each post author so it can match when an author responds to his own post with additional styling;
 
 ```yml
 authors:
@@ -47,7 +49,7 @@ authors:
     url: https://damieng.com
 ```
 
-If you do not have an author set on each post/page you can define default ones like this;
+If you do not have an author set on each post/page you can define a default one like this;
 
 ```yml
 defaults:
