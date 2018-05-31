@@ -34,7 +34,28 @@ emptyArray: []
 
 comments:
   receiver: https://{{your-receiver-site}}/api/PostComment}}
+```
 
+Also add `commenting: open` to your defaults to switch the new comment form on.  You can switch it back off per post by adding `commenting: closed` to the page or post front matter.
+
+```yml
+defaults:
+  -
+    scope:
+      path: ''
+      type: pages
+    values:
+      layout: page
+      author: damieng
+      commenting: open
+  -
+    scope:
+      path: '_posts'
+      type: posts
+    values:
+      layout: post
+      author: damieng
+      commenting: open
 ```
 
 ### Optional post-author highlighting
@@ -49,25 +70,7 @@ authors:
     url: https://damieng.com
 ```
 
-If you do not have an author set on each post/page you can define a default one like this;
-
-```yml
-defaults:
-  -
-    scope:
-      path: ''
-      type: pages
-    values:
-      layout: page
-      author: damieng
-  -
-    scope:
-      path: '_posts'
-      type: posts
-    values:
-      layout: post
-      author: damieng
-```
+If you do not have an author set on each post/page you can define a default one as shown in an example above.
 
 ## Exporters
 
