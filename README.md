@@ -78,7 +78,7 @@ defaults:
 
 ### Disqus
 
-- Visit http://github.com/haacked/disqus-importer and follow the instructionst there.
+- A [Discuss importer](http://github.com/haacked/disqus-importer) is available
 
 ## Receivers
 
