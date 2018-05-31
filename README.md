@@ -78,7 +78,7 @@ defaults:
 
 ### Disqus
 
-- A [Discuss importer](http://github.com/haacked/disqus-importer) is available
+- A [Discuss importer](https://github.com/haacked/disqus-importer) is available
 
 ## Receivers
 
