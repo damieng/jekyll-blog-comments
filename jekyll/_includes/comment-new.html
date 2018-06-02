@@ -2,6 +2,7 @@
 <form action="/fake" method="post" id="commentform" class="form-horizontal">
   <input name="redirect" type="hidden" value="/thanks">
   <input name="post_id" type="hidden" value="{{ slug }}">
+  <input name="comment-site" type="hidden" value="{{ site.url }}">
   <div id="commenttext">
     <textarea name="comment" id="comment" placeholder="Continue the discussion."></textarea>
   </div>
