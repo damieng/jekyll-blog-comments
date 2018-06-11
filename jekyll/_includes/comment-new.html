@@ -1,27 +1,22 @@
 <h3>Respond to this</h3>
 <form action="/fake" method="post" id="commentform" class="form-horizontal">
-  <input name="redirect" type="hidden" value="/thanks">
-  <input name="post_id" type="hidden" value="{{ slug }}">
-  <input name="comment-site" type="hidden" value="{{ site.url }}">
-  <div id="comment-body">
+  <fieldset id="commentfields">
+    <input name="redirect" type="hidden" value="/thanks">
+    <input name="post_id" type="hidden" value="{{ slug }}">
+    <input name="comment-site" type="hidden" value="{{ site.url }}">
     <textarea name="message" id="message" placeholder="Continue the discussion."></textarea>
-  </div>
-  <div class="control-group">
+
     <label for="name">Name/alias <span>(Required, displayed)</span></label>
     <input type="text" name="name" id="name" placeholder="Name" />
-  </div>
-  <div class="control-group">
+
     <label for="email">Email <span>(Required, not shown)</span></label>
     <input type="text" name="email" id="email" placeholder="myemail@somedomain.com" />
-  </div>
-  <div class="control-group">
+
     <label for="url">Website <span>(Optional, displayed)</span></label>
     <input type="text" name="url" id="url" placeholder="https://mywebsite.com" />
-  </div>
-  <div class="control-group">
-    <label>&nbsp;</label>
+
     <button onclick="setupForm()" type="button" class="btn btn-primary" id="commentbutton">Leave response</button>
-  </div>
+  </fieldset>
 </form>
 <script>
     function setupForm() {
@@ -45,6 +40,8 @@
       form.action = '{{ site.comments.receiver }}'
       button.innerText = 'Posting...'
       button.disabled = true
+      var fields = document.getElementById('commentfields')                                         
+      fields.disabled = true
       form.submit()
     }
   </script>
