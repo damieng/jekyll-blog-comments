@@ -1,7 +1,7 @@
 <h3>Respond to this</h3>
 <form action="/fake" method="post" id="commentform" class="form-horizontal">
   <fieldset id="commentfields">
-    <input name="redirect" type="hidden" value="/thanks">
+    <input name="redirect" type="hidden" value="{{ site.url }}/thanks">
     <input name="post_id" type="hidden" value="{{ slug }}">
     <input name="comment-site" type="hidden" value="{{ site.url }}">
     <textarea name="message" id="message" placeholder="Continue the discussion."></textarea>
