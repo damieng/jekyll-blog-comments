@@ -18,7 +18,9 @@ $file = fopen($filename, 'w') or die(print_r(error_get_last(),true));
 fputs($file, "id: {$comment->comment_ID}\n");                                                                                 
 fputs($file, "name: {$comment->comment_author}\n");                                                                           
 if ($comment->comment_author_email) {                                                                                         
-  fputs($file, "email: {$comment->comment_author_email}\n");                                                                  
+  fputs($file, "email: {$comment->comment_author_email}\n");                                
+  $avatarmd5 = md5($comment->comment_author_email);
+  fputs($file, "avatar: https://www.gravatar.com/avatar/{$avatarmd5}?r=pg&d=retro\n");
 }                                                                                                                             
 if ($comment->comment_author_url) {                                                                                           
   fputs($file, "url: {$comment->comment_author_url}\n");                                                                      
