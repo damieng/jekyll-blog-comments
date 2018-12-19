@@ -40,10 +40,9 @@
       form.action = '{{ site.comments.receiver }}'
       button.innerText = 'Posting...'
       button.disabled = true
+      form.submit()
       var fields = document.getElementById('commentfields')                                         
       fields.disabled = true
-      form.submit()
     }
   </script>
-</form>
 <div id="commentstatus" style="clear:both" class="status"></div>
