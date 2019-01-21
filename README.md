@@ -6,13 +6,13 @@ This repo provides some tools to address that.  Specifically;
 
 ## Includes/templates
 
-The [jekyll/_includes](/jekyll/_includes) folder contains three files that you can include from your Jekyll site to render comments, they are;
+The [jekyll/_includes](/jekyll/_includes) folder contains three files to be included in Jekyll site to render the comments and allow new ones, they are;
 
 - [comment.html](/jekyll/_includes/comment.html) - Renders a single comment
 - [comment-new.html](/jekyll/_includes/comment-new.html) - Show a 'leave a comment' form 
 - [comments.html](/jekyll/_includes/comments.html) - Loops through comment.html for a post and follows it up with comment-new.html
 
-Copy these to your `_includes` folder then include them from your blog post layout, e.g. my `_layouts/post.html` file looks like this;
+Copy these to your `_includes` folder then include `comments.html` from your blog post layout, e.g. my `_layouts/post.html` file looks like this;
 
 ```yml
 ---
