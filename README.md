@@ -96,7 +96,7 @@ Then you can just loop over latest_comments as you normally would:
 ```html
 <ol>
 {% for comment in latest_comments %}
-  <li id="{{ comment.id }}"{% if comment.email == author.email %} class="byauthor" {% endif %}>
+  <li id="{{ comment.id }}">
     {% include comment.html %}
   </li>{% endfor %}
 </ol>
