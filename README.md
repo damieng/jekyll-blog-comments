@@ -85,7 +85,7 @@ If you want to display the latest comments across all posts etc. then there are 
 {% endfor %}
 ```
 
-Then you need to modify the whole collection as you want, e.g. sorting by date, getting the last 5 and then reversing them so the newest are first.
+Then you need to modify the whole collection as you want, e.g. sorting by date, reversing them so the most recent are first then getting the first 5.
 
 ```
 {% assign latest_comments = unsorted_comments | sort: 'date'' | reverse | slice: 0, 5 %}
