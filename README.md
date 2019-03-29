@@ -72,6 +72,36 @@ authors:
 
 If you do not have an author set on each post/page you can define a default one as shown in an example above.
 
+### Optional latest comments snippet
+
+If you want to display the latest comments across all posts etc. then there are a few steps.  The first combines all the comments together from their heirarchy:
+
+```
+{% assign unsorted_comments = site.emptyArray %}
+{% for post_comments in site.data.comments %}
+    {% for comment in post_comments[1] %}
+        {% assign unsorted_comments = unsorted_comments | push: comment[1] %}
+    {% endfor %}
+{% endfor %}
+```
+
+Then you need to modify the whole collection as you want, e.g. sorting by date, getting the last 5 and then reversing them so the newest are first.
+
+```
+{% assign latest_comments = unsorted_comments | sort: 'date'' | reverse | slice: 0, 5 %}
+```
+
+Then you can just loop over latest_comments as you normally would: 
+
+```html
+<ol>
+{% for comment in latest_comments %}
+  <li id="{{ comment.id }}"{% if comment.email == author.email %} class="byauthor" {% endif %}>
+    {% include comment.html %}
+  </li>{% endfor %}
+</ol>
+```
+
 ## Exporters
 
 ### WordPress
