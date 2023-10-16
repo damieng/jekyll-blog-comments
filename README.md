@@ -1,5 +1,7 @@
 # Jekyll Blog Comments
 
+> I have switched from Jekyll to Nuxt and so this repo is no longer maintained. The theory and indeed same receiver can also work in Nuxt static sites too.
+
 Jekyll is a great tool for creating a statically generated blog but out of the box it doesn't have any support for comments.
 
 This repo provides some tools to address that.  Specifically;
